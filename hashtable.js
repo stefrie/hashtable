@@ -43,7 +43,6 @@ class HashTable {
 	}
 
 	hash(key) {
-
 		let sum = 0;
 		for (let i = 0; i < key.length; i++) {
 			sum += key.charCodeAt(i);
@@ -84,3 +83,4 @@ console.log(map.hash('Stefanie'));
 map.add('Stefanie', 'student');
 console.log(map.map[761]);
 
+module.exports = { Node, LinkedList, HashTable };
