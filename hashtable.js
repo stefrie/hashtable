@@ -81,11 +81,9 @@ class HashTable {
 		const arr = [];
 		for (let i = 0; i < arr.length; i++) {
 			if (strArr.indexOf(strArr[i]) !== strArr.lastIndexOf(strArr[i])) {
-				if (!arr.includes(strArr[i])) {
-					arr.push(strArr[i]);
-				};
-			};
-		};
+				arr.push(strArr[i]);
+			}
+		}
 		return arr.join(' ');
 	}
 }
