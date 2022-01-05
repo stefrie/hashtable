@@ -75,12 +75,28 @@ class HashTable {
 	find() {
 
 	}
+
+	findRepeatedWord(str) {
+		const strArr = str.split(' ');
+		const arr = [];
+		for (let i = 0; i < arr.length; i++) {
+			if (strArr.indexOf(strArr[i]) !== strArr.lastIndexOf(strArr[i])) {
+				if (!arr.includes(strArr[i])) {
+					arr.push(strArr[i]);
+				};
+			};
+		};
+		return arr.join(' ');
+	}
 }
 
 let map = new HashTable(1024);
 console.log(map.hash('Stefanie'));
+console.log(map.findRepeatedWord('It was the best of times, it was the worst of times'));
 
 map.add('Stefanie', 'student');
 console.log(map.map[761]);
+
+
 
 module.exports = { Node, LinkedList, HashTable };
